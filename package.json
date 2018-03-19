@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "private": false,
   "scripts": {
-    "build": "babel ./ -d dist",
-    "start": "node ./bin/www",
+    "build": "babel -d ./dist ./",
+    "prebuild": "rm -rf dist/*",
+    "start": "NODE_ENV=production node ./dist/bin/www",
+    "prestart": "npm build",
     "start:dev": "nodemon ./bin/www -e pug --watch .env --exec babel-node --presets es2015 babel-node",
     "mocha": "mocha --compilers js:babel-register",
     "test": "mocha --compilers js:babel-register --recursive ./test/"
