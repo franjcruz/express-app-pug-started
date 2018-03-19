@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules
+
+# Build directory
+dist
+
+# Dotenv configuration
+.env
+
+# Visual Studio Code
+.vscode
+
+# Logs
+logs

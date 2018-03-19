@@ -1,0 +1,34 @@
+{
+  "name": "express-app-pug-started",
+  "version": "0.0.0",
+  "private": false,
+  "scripts": {
+    "build": "babel ./ -d dist",
+    "start": "node ./bin/www",
+    "start:dev": "nodemon ./bin/www -e pug --watch .env --exec babel-node --presets es2015 babel-node",
+    "mocha": "mocha --compilers js:babel-register",
+    "test": "mocha --compilers js:babel-register --recursive ./test/"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "~2.4.5",
+    "winston": "^2.4.1",
+    "winston-daily-rotate-file": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "mocha": "^5.0.4",
+    "nodemon": "^1.17.2",
+    "prettier": "^1.11.1"
+  }
+}
